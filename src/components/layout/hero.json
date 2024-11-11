@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_layout_heroes",
+  "info": {
+    "displayName": "Hero",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "buttonPrimary": {
+      "type": "string"
+    },
+    "buttonSecondary": {
+      "type": "string"
+    },
+    "buttonSecondaryLink": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
