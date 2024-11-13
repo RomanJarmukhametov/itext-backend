@@ -23,7 +23,8 @@
       "components": [
         "layout.hero",
         "layout.features",
-        "layout.numbers"
+        "layout.numbers",
+        "layout.advantages"
       ]
     }
   }

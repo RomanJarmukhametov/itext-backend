@@ -382,7 +382,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   };
   attributes: {
     blocks: Schema.Attribute.DynamicZone<
-      ['layout.hero', 'layout.features', 'layout.numbers']
+      ['layout.hero', 'layout.features', 'layout.numbers', 'layout.advantages']
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

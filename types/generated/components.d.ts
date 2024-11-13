@@ -3,13 +3,24 @@ import type { Schema, Struct } from '@strapi/strapi';
 export interface ComponentsCard extends Struct.ComponentSchema {
   collectionName: 'components_components_cards';
   info: {
+    description: '';
     displayName: 'Card';
   };
   attributes: {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.String;
     icon: Schema.Attribute.Enumeration<
-      ['Professional', 'Specialized', 'Automation']
+      [
+        'Professional',
+        'Specialized',
+        'Automation',
+        'Experience',
+        'Deadline',
+        'Privacy',
+        'Support',
+        'Solutions',
+        'Culture',
+      ]
     >;
   };
 }
@@ -33,6 +44,19 @@ export interface ComponentsStats extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.String;
     number: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutAdvantages extends Struct.ComponentSchema {
+  collectionName: 'components_layout_advantages';
+  info: {
+    displayName: 'Advantages';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'components.card', true>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    tagline: Schema.Attribute.String;
   };
 }
 
@@ -85,6 +109,7 @@ declare module '@strapi/strapi' {
       'components.card': ComponentsCard;
       'components.navigation-item': ComponentsNavigationItem;
       'components.stats': ComponentsStats;
+      'layout.advantages': LayoutAdvantages;
       'layout.features': LayoutFeatures;
       'layout.hero': LayoutHero;
       'layout.numbers': LayoutNumbers;

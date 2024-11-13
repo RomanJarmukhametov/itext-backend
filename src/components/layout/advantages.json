@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_layout_advantages",
+  "info": {
+    "displayName": "Advantages"
+  },
+  "options": {},
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.card"
+    }
+  }
+}
