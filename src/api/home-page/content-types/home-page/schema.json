@@ -22,7 +22,8 @@
       "type": "dynamiczone",
       "components": [
         "layout.hero",
-        "layout.features"
+        "layout.features",
+        "layout.numbers"
       ]
     }
   }

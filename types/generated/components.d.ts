@@ -25,6 +25,17 @@ export interface ComponentsNavigationItem extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsStats extends Struct.ComponentSchema {
+  collectionName: 'components_components_stats';
+  info: {
+    displayName: 'Stats';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    number: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutFeatures extends Struct.ComponentSchema {
   collectionName: 'components_layout_features';
   info: {
@@ -55,13 +66,28 @@ export interface LayoutHero extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutNumbers extends Struct.ComponentSchema {
+  collectionName: 'components_layout_numbers';
+  info: {
+    displayName: 'Numbers';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    stats: Schema.Attribute.Component<'components.stats', true>;
+    tagline: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'components.card': ComponentsCard;
       'components.navigation-item': ComponentsNavigationItem;
+      'components.stats': ComponentsStats;
       'layout.features': LayoutFeatures;
       'layout.hero': LayoutHero;
+      'layout.numbers': LayoutNumbers;
     }
   }
 }
