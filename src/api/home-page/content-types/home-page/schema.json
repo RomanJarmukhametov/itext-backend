@@ -24,7 +24,8 @@
         "layout.hero",
         "layout.features",
         "layout.numbers",
-        "layout.advantages"
+        "layout.advantages",
+        "layout.logos"
       ]
     }
   }

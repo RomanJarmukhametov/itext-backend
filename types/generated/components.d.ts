@@ -90,6 +90,19 @@ export interface LayoutHero extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutLogos extends Struct.ComponentSchema {
+  collectionName: 'components_layout_logos';
+  info: {
+    displayName: 'Logos';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images', true>;
+    tagline: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutNumbers extends Struct.ComponentSchema {
   collectionName: 'components_layout_numbers';
   info: {
@@ -112,6 +125,7 @@ declare module '@strapi/strapi' {
       'layout.advantages': LayoutAdvantages;
       'layout.features': LayoutFeatures;
       'layout.hero': LayoutHero;
+      'layout.logos': LayoutLogos;
       'layout.numbers': LayoutNumbers;
     }
   }
