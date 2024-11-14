@@ -60,6 +60,20 @@ export interface LayoutAdvantages extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutCta extends Struct.ComponentSchema {
+  collectionName: 'components_layout_ctas';
+  info: {
+    displayName: 'CTA';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    primaryButtonText: Schema.Attribute.String;
+    secondaryButtonLink: Schema.Attribute.String;
+    secondaryButtonText: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutFeatures extends Struct.ComponentSchema {
   collectionName: 'components_layout_features';
   info: {
@@ -135,6 +149,7 @@ declare module '@strapi/strapi' {
       'components.navigation-item': ComponentsNavigationItem;
       'components.stats': ComponentsStats;
       'layout.advantages': LayoutAdvantages;
+      'layout.cta': LayoutCta;
       'layout.features': LayoutFeatures;
       'layout.hero': LayoutHero;
       'layout.logos': LayoutLogos;
