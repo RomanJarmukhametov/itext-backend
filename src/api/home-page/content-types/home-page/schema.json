@@ -25,7 +25,8 @@
         "layout.features",
         "layout.numbers",
         "layout.advantages",
-        "layout.logos"
+        "layout.logos",
+        "layout.reviews"
       ]
     }
   }

@@ -388,6 +388,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         'layout.numbers',
         'layout.advantages',
         'layout.logos',
+        'layout.reviews',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

@@ -116,6 +116,18 @@ export interface LayoutNumbers extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutReviews extends Struct.ComponentSchema {
+  collectionName: 'components_layout_reviews';
+  info: {
+    displayName: 'Reviews';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    tagline: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -127,6 +139,7 @@ declare module '@strapi/strapi' {
       'layout.hero': LayoutHero;
       'layout.logos': LayoutLogos;
       'layout.numbers': LayoutNumbers;
+      'layout.reviews': LayoutReviews;
     }
   }
 }
