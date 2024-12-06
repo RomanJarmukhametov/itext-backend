@@ -387,6 +387,8 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
         'layout.values',
         'layout.numbers',
         'layout.advantages',
+        'layout.logos',
+        'layout.cta',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

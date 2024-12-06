@@ -24,7 +24,9 @@
         "layout.page-header",
         "layout.values",
         "layout.numbers",
-        "layout.advantages"
+        "layout.advantages",
+        "layout.logos",
+        "layout.cta"
       ]
     }
   }
