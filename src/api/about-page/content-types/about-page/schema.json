@@ -22,7 +22,8 @@
       "type": "dynamiczone",
       "components": [
         "layout.page-header",
-        "layout.values"
+        "layout.values",
+        "layout.numbers"
       ]
     }
   }
