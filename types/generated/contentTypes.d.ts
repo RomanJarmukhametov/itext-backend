@@ -382,7 +382,12 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
   };
   attributes: {
     blocks: Schema.Attribute.DynamicZone<
-      ['layout.page-header', 'layout.values', 'layout.numbers']
+      [
+        'layout.page-header',
+        'layout.values',
+        'layout.numbers',
+        'layout.advantages',
+      ]
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
