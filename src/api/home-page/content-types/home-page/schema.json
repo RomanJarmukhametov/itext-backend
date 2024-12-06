@@ -13,10 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {}
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "pluginOptions": {}
     },
     "blocks": {
       "type": "dynamiczone",
@@ -28,7 +30,8 @@
         "layout.logos",
         "layout.reviews",
         "layout.cta"
-      ]
+      ],
+      "pluginOptions": {}
     }
   }
 }

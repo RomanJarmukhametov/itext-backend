@@ -130,6 +130,19 @@ export interface LayoutNumbers extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutPageHeader extends Struct.ComponentSchema {
+  collectionName: 'components_layout_page_headers';
+  info: {
+    displayName: 'Page Header';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    tagline: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutReviews extends Struct.ComponentSchema {
   collectionName: 'components_layout_reviews';
   info: {
@@ -154,6 +167,7 @@ declare module '@strapi/strapi' {
       'layout.hero': LayoutHero;
       'layout.logos': LayoutLogos;
       'layout.numbers': LayoutNumbers;
+      'layout.page-header': LayoutPageHeader;
       'layout.reviews': LayoutReviews;
     }
   }
