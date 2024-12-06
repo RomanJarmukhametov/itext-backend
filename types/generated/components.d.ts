@@ -47,6 +47,18 @@ export interface ComponentsStats extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsValueCard extends Struct.ComponentSchema {
+  collectionName: 'components_components_value_cards';
+  info: {
+    displayName: 'Value Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    number: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutAdvantages extends Struct.ComponentSchema {
   collectionName: 'components_layout_advantages';
   info: {
@@ -155,12 +167,27 @@ export interface LayoutReviews extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutValues extends Struct.ComponentSchema {
+  collectionName: 'components_layout_values';
+  info: {
+    description: '';
+    displayName: 'Values';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    tagline: Schema.Attribute.String;
+    valueCard: Schema.Attribute.Component<'components.value-card', true>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'components.card': ComponentsCard;
       'components.navigation-item': ComponentsNavigationItem;
       'components.stats': ComponentsStats;
+      'components.value-card': ComponentsValueCard;
       'layout.advantages': LayoutAdvantages;
       'layout.cta': LayoutCta;
       'layout.features': LayoutFeatures;
@@ -169,6 +196,7 @@ declare module '@strapi/strapi' {
       'layout.numbers': LayoutNumbers;
       'layout.page-header': LayoutPageHeader;
       'layout.reviews': LayoutReviews;
+      'layout.values': LayoutValues;
     }
   }
 }

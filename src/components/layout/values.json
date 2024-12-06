@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_layout_values",
+  "info": {
+    "displayName": "Values",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "valueCard": {
+      "displayName": "Value Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.value-card"
+    }
+  }
+}

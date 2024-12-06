@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_components_value_cards",
+  "info": {
+    "displayName": "Value Card"
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
