@@ -485,6 +485,7 @@ export interface ApiNavigationNavigation extends Struct.SingleTypeSchema {
 export interface ApiServicePageServicePage extends Struct.SingleTypeSchema {
   collectionName: 'service_pages';
   info: {
+    description: '';
     displayName: 'Service Page';
     pluralName: 'service-pages';
     singularName: 'service-page';
@@ -493,7 +494,9 @@ export interface ApiServicePageServicePage extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    blocks: Schema.Attribute.DynamicZone<['layout.page-header']>;
+    blocks: Schema.Attribute.DynamicZone<
+      ['layout.page-header', 'layout.peculiarities']
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "service-page",
     "pluralName": "service-pages",
-    "displayName": "Service Page"
+    "displayName": "Service Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,7 +21,8 @@
     "blocks": {
       "type": "dynamiczone",
       "components": [
-        "layout.page-header"
+        "layout.page-header",
+        "layout.peculiarities"
       ]
     }
   }

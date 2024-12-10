@@ -22,6 +22,7 @@ export interface ComponentsCard extends Struct.ComponentSchema {
         'Culture',
         'ProfessionalTranslations',
         'SpecializedTranslations',
+        'ProcessAutomation',
       ]
     >;
   };
@@ -157,6 +158,21 @@ export interface LayoutPageHeader extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutPeculiarities extends Struct.ComponentSchema {
+  collectionName: 'components_layout_peculiarities';
+  info: {
+    description: '';
+    displayName: 'Peculiarities';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'components.card', true>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    tagline: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutReviews extends Struct.ComponentSchema {
   collectionName: 'components_layout_reviews';
   info: {
@@ -197,6 +213,7 @@ declare module '@strapi/strapi' {
       'layout.logos': LayoutLogos;
       'layout.numbers': LayoutNumbers;
       'layout.page-header': LayoutPageHeader;
+      'layout.peculiarities': LayoutPeculiarities;
       'layout.reviews': LayoutReviews;
       'layout.values': LayoutValues;
     }
