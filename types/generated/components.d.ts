@@ -20,6 +20,8 @@ export interface ComponentsCard extends Struct.ComponentSchema {
         'Support',
         'Solutions',
         'Culture',
+        'ProfessionalTranslations',
+        'SpecializedTranslations',
       ]
     >;
   };
