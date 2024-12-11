@@ -22,7 +22,8 @@
       "type": "dynamiczone",
       "components": [
         "layout.page-header",
-        "layout.peculiarities"
+        "layout.peculiarities",
+        "layout.features"
       ]
     }
   }

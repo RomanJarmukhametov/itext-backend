@@ -20,7 +20,10 @@
         "Culture",
         "ProfessionalTranslations",
         "SpecializedTranslations",
-        "ProcessAutomation"
+        "ProcessAutomation",
+        "Order",
+        "TranslationAndVerification",
+        "Delivery"
       ]
     },
     "heading": {

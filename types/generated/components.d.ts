@@ -23,6 +23,9 @@ export interface ComponentsCard extends Struct.ComponentSchema {
         'ProfessionalTranslations',
         'SpecializedTranslations',
         'ProcessAutomation',
+        'Order',
+        'TranslationAndVerification',
+        'Delivery',
       ]
     >;
   };

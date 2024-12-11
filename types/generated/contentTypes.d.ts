@@ -495,7 +495,7 @@ export interface ApiServicePageServicePage extends Struct.SingleTypeSchema {
   };
   attributes: {
     blocks: Schema.Attribute.DynamicZone<
-      ['layout.page-header', 'layout.peculiarities']
+      ['layout.page-header', 'layout.peculiarities', 'layout.features']
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
