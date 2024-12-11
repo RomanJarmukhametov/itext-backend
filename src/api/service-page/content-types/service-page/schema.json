@@ -24,7 +24,10 @@
         "layout.page-header",
         "layout.peculiarities",
         "layout.features",
-        "layout.faq"
+        "layout.faq",
+        "layout.logos",
+        "layout.reviews",
+        "layout.cta"
       ]
     }
   }

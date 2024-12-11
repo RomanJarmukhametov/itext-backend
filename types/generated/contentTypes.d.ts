@@ -500,6 +500,9 @@ export interface ApiServicePageServicePage extends Struct.SingleTypeSchema {
         'layout.peculiarities',
         'layout.features',
         'layout.faq',
+        'layout.logos',
+        'layout.reviews',
+        'layout.cta',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
