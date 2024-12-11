@@ -23,7 +23,8 @@
         "ProcessAutomation",
         "Order",
         "TranslationAndVerification",
-        "Delivery"
+        "Delivery",
+        "Shield"
       ]
     },
     "heading": {

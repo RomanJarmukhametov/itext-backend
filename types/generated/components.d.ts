@@ -26,6 +26,7 @@ export interface ComponentsCard extends Struct.ComponentSchema {
         'Order',
         'TranslationAndVerification',
         'Delivery',
+        'Shield',
       ]
     >;
   };
@@ -89,6 +90,23 @@ export interface LayoutCta extends Struct.ComponentSchema {
     primaryButtonText: Schema.Attribute.String;
     secondaryButtonLink: Schema.Attribute.String;
     secondaryButtonText: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutFaq extends Struct.ComponentSchema {
+  collectionName: 'components_layout_faqs';
+  info: {
+    displayName: 'FAQ';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'components.card', true>;
+    ctaButtonLink: Schema.Attribute.String;
+    ctaButtonText: Schema.Attribute.String;
+    ctaDescription: Schema.Attribute.Text;
+    ctaHeading: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    tagline: Schema.Attribute.String;
   };
 }
 
@@ -211,6 +229,7 @@ declare module '@strapi/strapi' {
       'components.value-card': ComponentsValueCard;
       'layout.advantages': LayoutAdvantages;
       'layout.cta': LayoutCta;
+      'layout.faq': LayoutFaq;
       'layout.features': LayoutFeatures;
       'layout.hero': LayoutHero;
       'layout.logos': LayoutLogos;

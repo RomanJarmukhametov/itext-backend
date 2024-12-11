@@ -23,7 +23,8 @@
       "components": [
         "layout.page-header",
         "layout.peculiarities",
-        "layout.features"
+        "layout.features",
+        "layout.faq"
       ]
     }
   }

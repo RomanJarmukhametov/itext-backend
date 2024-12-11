@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_layout_faqs",
+  "info": {
+    "displayName": "FAQ"
+  },
+  "options": {},
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.card"
+    },
+    "ctaHeading": {
+      "type": "string"
+    },
+    "ctaDescription": {
+      "type": "text"
+    },
+    "ctaButtonText": {
+      "type": "string"
+    },
+    "ctaButtonLink": {
+      "type": "string"
+    }
+  }
+}
