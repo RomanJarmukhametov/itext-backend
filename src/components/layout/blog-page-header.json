@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_blog_page_headers",
+  "info": {
+    "displayName": "Blog Page Header"
+  },
+  "options": {},
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

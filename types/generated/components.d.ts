@@ -79,6 +79,18 @@ export interface LayoutAdvantages extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutBlogPageHeader extends Struct.ComponentSchema {
+  collectionName: 'components_layout_blog_page_headers';
+  info: {
+    displayName: 'Blog Page Header';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    tagline: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutCta extends Struct.ComponentSchema {
   collectionName: 'components_layout_ctas';
   info: {
@@ -228,6 +240,7 @@ declare module '@strapi/strapi' {
       'components.stats': ComponentsStats;
       'components.value-card': ComponentsValueCard;
       'layout.advantages': LayoutAdvantages;
+      'layout.blog-page-header': LayoutBlogPageHeader;
       'layout.cta': LayoutCta;
       'layout.faq': LayoutFaq;
       'layout.features': LayoutFeatures;
