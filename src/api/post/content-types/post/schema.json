@@ -33,6 +33,21 @@
       "type": "uid",
       "targetField": "title",
       "required": true
+    },
+    "author": {
+      "type": "enumeration",
+      "enum": [
+        "Роман Джармухаметов"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Технологии",
+        "Бизнес",
+        "Продуктивность",
+        "Изучение языков"
+      ]
     }
   }
 }
