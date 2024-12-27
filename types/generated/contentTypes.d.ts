@@ -603,6 +603,7 @@ export interface ApiServicePageServicePage extends Struct.SingleTypeSchema {
 export interface ApiSubscriberSubscriber extends Struct.CollectionTypeSchema {
   collectionName: 'subscribers';
   info: {
+    description: '';
     displayName: 'Subscribers';
     pluralName: 'subscribers';
     singularName: 'subscriber';
@@ -614,7 +615,6 @@ export interface ApiSubscriberSubscriber extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    email: Schema.Attribute.Email & Schema.Attribute.Unique;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -625,6 +625,7 @@ export interface ApiSubscriberSubscriber extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    userEmail: Schema.Attribute.Email & Schema.Attribute.Unique;
   };
 }
 
