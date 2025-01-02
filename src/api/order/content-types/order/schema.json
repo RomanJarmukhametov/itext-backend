@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Orders"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userName": {
+      "type": "string"
+    },
+    "userEmail": {
+      "type": "string"
+    },
+    "userPhone": {
+      "type": "string"
+    },
+    "sourceLanguage": {
+      "type": "string"
+    },
+    "targetLanguage": {
+      "type": "string"
+    },
+    "userMessage": {
+      "type": "text"
+    },
+    "userFiles": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

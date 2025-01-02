@@ -516,6 +516,37 @@ export interface ApiNavigationNavigation extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
+  collectionName: 'orders';
+  info: {
+    displayName: 'Orders';
+    pluralName: 'orders';
+    singularName: 'order';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::order.order'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sourceLanguage: Schema.Attribute.String;
+    targetLanguage: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    userEmail: Schema.Attribute.String;
+    userFiles: Schema.Attribute.Media<'images' | 'files', true>;
+    userMessage: Schema.Attribute.Text;
+    userName: Schema.Attribute.String;
+    userPhone: Schema.Attribute.String;
+  };
+}
+
 export interface ApiPostPost extends Struct.CollectionTypeSchema {
   collectionName: 'posts';
   info: {
@@ -1142,6 +1173,7 @@ declare module '@strapi/strapi' {
       'api::blog-page.blog-page': ApiBlogPageBlogPage;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::navigation.navigation': ApiNavigationNavigation;
+      'api::order.order': ApiOrderOrder;
       'api::post.post': ApiPostPost;
       'api::service-page.service-page': ApiServicePageServicePage;
       'api::subscriber.subscriber': ApiSubscriberSubscriber;
