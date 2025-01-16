@@ -9,7 +9,7 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "strapi": "strapi",
-    "prepare": "husky"
+    "prepare": "husky install"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.8.0",
@@ -33,7 +33,7 @@
     "typescript": "^5"
   },
   "engines": {
-    "node": ">=18.0.0 <=22.x.x",
+    "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
   "strapi": {
