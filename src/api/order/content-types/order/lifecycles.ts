@@ -60,17 +60,35 @@ export default {
     });
 
     // Build file details content
+    // const userFilesContent =
+    //   Array.isArray(userFiles) && userFiles.length > 0
+    //     ? userFiles
+    //         .map(
+    //           (file) =>
+    //             `<div style="margin-bottom: 10px;">
+    //                 <p><strong>ID файла:</strong> ${file.id}</p>
+    //                 <p><strong>Document ID:</strong> ${file.documentId || "N/A"}</p>
+    //                 <p><strong>URL:</strong> <a href="${strapi.config.server.url}${file.url}" target="_blank" style="color: #007bff; text-decoration: none;">${file.url}</a></p>
+    //               </div>`
+    //         )
+    //         .join("")
+    //     : "<p>Нет загруженных файлов.</p>";
     const userFilesContent =
       Array.isArray(userFiles) && userFiles.length > 0
         ? userFiles
-            .map(
-              (file) =>
-                `<div style="margin-bottom: 10px;">
-                    <p><strong>ID файла:</strong> ${file.id}</p>
-                    <p><strong>Document ID:</strong> ${file.documentId || "N/A"}</p>
-                    <p><strong>URL:</strong> <a href="${strapi.config.server.url}${file.url}" target="_blank" style="color: #007bff; text-decoration: none;">${file.url}</a></p>
-                  </div>`
-            )
+            .map((file) => {
+              // Check if the URL is absolute
+              const fileUrl = file.url.startsWith("http")
+                ? file.url // Use the full URL as is
+                : `${strapi.config.server.url}${file.url}`; // Prepend server URL for relative paths
+
+              return `
+            <div style="margin-bottom: 10px;">
+              <p><strong>ID файла:</strong> ${file.id}</p>
+              <p><strong>Document ID:</strong> ${file.documentId || "N/A"}</p>
+              <p><strong>URL:</strong> <a href="${fileUrl}" target="_blank" style="color: #007bff; text-decoration: none;">${fileUrl}</a></p>
+            </div>`;
+            })
             .join("")
         : "<p>Нет загруженных файлов.</p>";
 
